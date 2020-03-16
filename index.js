@@ -6,12 +6,12 @@ let duration;
 
 const timer = new Timer(durationInput, startButton, pauseButton, {
     onStart() {
-
+        console.log("Start")
     },
     onTick() {
-
+        console.log("Tick...")
     },
     onComplete() {
-        
+        console.log("Completed!")
     }
 });
