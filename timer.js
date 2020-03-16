@@ -9,7 +9,7 @@ class Timer {
             this.onComplete = callbacks.onComplete
         }
 
-        this.durationInput.value = 5;
+        this.durationInput.value = 1200;
         this.timeLeft = durationInput.value;
 
         this.durationInput.value = this.formatTime(this.timeLeft);
@@ -24,7 +24,6 @@ class Timer {
     };
 
     pause = () => {
-
         clearInterval(this.interval);
     }
 

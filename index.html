@@ -1,14 +1,42 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <input id="duration"/>
+    <div class="timer">
+        <div class="controls">
+          <input id="duration"/>
+          <div>
+            <button id="start">Start</button>
+            <button id="pause">Pause</button>
+          </div>
+        </div>
+        <svg class="dial">
 
-    <button id="start">Start</button>
-    <button id="pause">Pause</button>
+            <circle 
+            r="190" 
+            cx="200", 
+            cy="200" 
+            fill="transparent"
+            stroke="#0d6d82"
+            stroke-width="19"
+            />
+            
+            <circle class="c"
+              fill="transparent"
+              stroke="#62d6f0"
+              stroke-width="20"
+              r="190"
+              cx="0"
+              cy="200"
+              transform="rotate(-90 100 100)"
+            />
+          </svg>
+        </div>        
 
     <script src="timer.js"></script>
     <script src="index.js"></script>
