@@ -25,6 +25,15 @@ class Timer {
     }
 
     tick = () => {
+        if(this.timeLeft <= 0){
+            this.pause();
+            if (this.onComplete) this.onComplete();
+        }
+        else {
+            this.timeLeft = this.timeLeft -1;
+            this.durationInput.value = this.timeLeft;
 
+            if(this.onTick) this.onTick(this.timeLeft);
+        }
     }
 }
