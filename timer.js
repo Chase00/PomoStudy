@@ -9,7 +9,10 @@ class Timer {
             this.onComplete = callbacks.onComplete
         }
 
+        this.durationInput.value = 5;
         this.timeLeft = durationInput.value;
+
+        this.durationInput.value = this.formatTime(this.timeLeft);
 
         this.startButton.addEventListener('click', this.start);
         this.pauseButton.addEventListener('click', this.pause);
@@ -21,6 +24,7 @@ class Timer {
     };
 
     pause = () => {
+
         clearInterval(this.interval);
     }
 
@@ -31,9 +35,20 @@ class Timer {
         }
         else {
             this.timeLeft = this.timeLeft -1;
-            this.durationInput.value = this.timeLeft;
+            const value = this.formatTime(this.timeLeft)
+            this.durationInput.value = value;
 
             if(this.onTick) this.onTick(this.timeLeft);
         }
+    }
+
+    formatTime = (time) => {
+        const minutes = Math.floor(time / 60);
+        let seconds = time % 60;
+
+        if (seconds < 10 ) {
+            seconds = `0${seconds}`;
+        }
+        return `${minutes}:${seconds}`;
     }
 }
