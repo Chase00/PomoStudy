@@ -15,6 +15,7 @@ class Timer {
         }
 
         this.displayTime(1500);
+        document.title = "25:00";
 
         this.startButton.addEventListener('click', this.start);
         this.pauseButton.addEventListener('click', this.pause);
@@ -25,6 +26,7 @@ class Timer {
     }
 
     pomodoro = () => {
+        document.title = "25:00";
         this.displayTime(1500);
         this.colorSwap("red", "green", "blue");
 
@@ -32,6 +34,7 @@ class Timer {
     }
 
     short = () => {
+        document.title = "5:00";
         this.displayTime(300);
         this.colorSwap("blue", "red", "green");
 
@@ -39,6 +42,7 @@ class Timer {
     }
 
     long = () => {
+        document.title = "15:00";
         this.displayTime(900);
         this.colorSwap("blue", "green", "red");
 
@@ -63,6 +67,7 @@ class Timer {
             this.timeLeft = this.timeLeft -1;
             const value = this.formatTime(this.timeLeft)
             this.durationInput.innerHTML = value;
+            document.title = value;
 
             if(this.onTick) this.onTick(this.timeLeft);
         }
