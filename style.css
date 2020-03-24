@@ -6,13 +6,26 @@ html, body{
 
 body {
     font-family: 'Nunito', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-    font-weight: bold;
     background-image: linear-gradient(19deg, rgb(0, 94, 138) 0%, rgb(113, 222, 255) 100%);
-    /* background-image: linear-gradient(19deg, rgb(51, 124, 69) 0%, rgb(64, 228, 119) 100%); */
-    /* background-image: linear-gradient(19deg, rgb(124, 51, 51) 0%, rgb(247, 107, 107) 100%); */
+    font-weight: bold;
     background-repeat: no-repeat;
     display: table;
     margin: 0 auto;
+}
+
+.blue {
+  background-image: linear-gradient(19deg, rgb(0, 94, 138) 0%, rgb(113, 222, 255) 100%);
+  stroke: #62d6f0;
+}
+
+.green {
+  background-image: linear-gradient(19deg, rgb(51, 124, 69) 0%, rgb(64, 228, 119) 100%);
+  stroke: #a4e480;
+}
+
+.red {
+  background-image: linear-gradient(19deg, rgb(124, 51, 51) 0%, rgb(247, 107, 107) 100%);
+  stroke: #ff9b9b;
 }
 
 .navbar {

@@ -26,14 +26,18 @@ class Timer {
 
     pomodoro = () => {
         this.displayTime(1500);
+        this.colorSwap("red", "green", "blue");
     }
 
     short = () => {
         this.displayTime(300);
+        this.colorSwap("blue", "red", "green");
+
     }
 
     long = () => {
         this.displayTime(900);
+        this.colorSwap("blue", "green", "red");
     }
 
     start = () => {
@@ -74,5 +78,16 @@ class Timer {
         this.timeLeft = durationInput.innerHTML;
 
         this.durationInput.innerHTML = this.formatTime(this.timeLeft);
+    }
+
+    colorSwap = (del1, del2, add) => {
+        const body = document.querySelector('body');
+        const cls = [del1 , del2];
+        body.classList.remove(...cls);
+        body.classList.add(add); 
+
+        const circle = document.querySelector('.c')
+        circle.classList.remove(...cls);
+        circle.classList.add(add)
     }
 }
