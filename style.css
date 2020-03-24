@@ -1,6 +1,25 @@
+html, body{
+  height: 100%;
+  width: 100%;
+  scroll-behavior: smooth;
+  overflow: hidden;
+}
 
+body {
+  font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-image: linear-gradient(19deg, rgb(0, 94, 138) 0%, rgb(113, 222, 255) 100%);
+    background-repeat: no-repeat;
+		margin: 0 auto;
+}
 
-.dial {
+.group {
+  display: table;
+  margin: 0 auto;
+  text-align: center;
+}
+
+  .dial {
     height: 400px;
     width: 400px;
   }
@@ -13,13 +32,18 @@
   * {
     font: inherit;
   }
-  
-  body {
-    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans',
-      'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+  .crtl {
+    filter: invert(100%);
+  }
+
+  .crtl:hover {
+    opacity: 60%;
+    transition: 0.2s;
   }
   
   .timer p {
+    color: white;
     display: block;
     border: none;
     width: 240px;
@@ -40,6 +64,32 @@
   
   .timer input:focus {
     outline: none;
+  }
+
+  .button {
+    background-color:transparent;
+    border-radius:30px;
+    border:3px solid #93e2fa;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:21px;
+    padding:16px 30px;
+    text-decoration:none;
+  }
+  .button:hover {
+    background-color:#8fd5eb;
+    opacity: 30%;
+    transition: 0.5s
+  }
+  .button:active {
+    position:relative;
+    top:1px;
+  }
+  
+  .btn-group {
+
   }
   
   .controls {

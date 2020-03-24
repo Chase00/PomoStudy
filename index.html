@@ -8,12 +8,15 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <br>
+  <br>
+  <div class = "group">
     <div class="timer">
         <div class="controls">
           <p id="duration"></p>
           <div>
-            <button id="start"><i class="fas fa-play"></i></button>
-            <button id="pause"><i class="fas fa-pause"></i></button>
+            <button id="start"><i class="crtl fas fa-play"></i></button>
+            <button id="pause"><i class="crtl fas fa-pause"></i></button>
           </div>
         </div>
         <svg class="dial">
@@ -37,11 +40,17 @@
               transform="rotate(-90 100 100)"
             />
           </svg>
-        </div>        
+        </div>     
+        
+        <br>
+        <br>
 
-        <button id="pomodoro">Pomodoro</button>
-        <button id="short">Short Break</button>
-        <button id="long">Long Break</button>
+        <div class="btn-group">
+          <button class="button" id="pomodoro">Pomodoro</button>
+          <button class="button" id="short">Short Break</button>
+          <button class="button" id="long">Long Break</button>
+        </div>
+      </div>
 
     <script src="timer.js"></script>
     <script src="index.js"></script>
