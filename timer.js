@@ -27,17 +27,22 @@ class Timer {
     pomodoro = () => {
         this.displayTime(1500);
         this.colorSwap("red", "green", "blue");
+
+        this.activeBtn(this.shortButton, this.longButton, this.pomButton);
     }
 
     short = () => {
         this.displayTime(300);
         this.colorSwap("blue", "red", "green");
 
+        this.activeBtn(this.pomButton, this.longButton, this.shortButton);
     }
 
     long = () => {
         this.displayTime(900);
         this.colorSwap("blue", "green", "red");
+
+        this.activeBtn(this.pomButton, this.shortButton, this.longButton);
     }
 
     start = () => {
@@ -88,6 +93,14 @@ class Timer {
 
         const circle = document.querySelector('.c')
         circle.classList.remove(...cls);
-        circle.classList.add(add)
+        circle.classList.add(add);
+    }
+
+    activeBtn = (non, non_, active) => {
+        non.classList.remove('active');
+        non_.classList.remove('active');
+
+        active.classList.add('active');
+
     }
 }

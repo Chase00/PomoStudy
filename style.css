@@ -121,9 +121,10 @@ h1 {
   }
 
   .button {
+    border: none;
+    outline: none;
     background-color:transparent;
-    border-radius:30px;
-    border:3px solid #93e2fa;
+    border-radius:8px;
     display:inline-block;
     cursor:pointer;
     color:#ffffff;
@@ -132,14 +133,9 @@ h1 {
     padding:16px 30px;
     text-decoration:none;
   }
-  .button:hover {
-    background-color:#8fd5eb;
-    opacity: 30%;
+  .active, .button:hover {
+    background-color: rgba(185, 185, 185, 0.274);
     transition: 0.5s
-  }
-  .button:active {
-    position:relative;
-    top:1px;
   }
   
   .controls {
