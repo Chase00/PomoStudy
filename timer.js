@@ -14,21 +14,26 @@ class Timer {
             this.onComplete = callbacks.onComplete
         }
 
-        this.displayTime(1200);
+        this.displayTime(1500);
 
         this.startButton.addEventListener('click', this.start);
         this.pauseButton.addEventListener('click', this.pause);
 
         this.pomButton.addEventListener('click', this.pomodoro);
         this.shortButton.addEventListener('click', this.short);
+        this.longButton.addEventListener('click', this.long);
     }
 
     pomodoro = () => {
-        this.displayTime(1200);
+        this.displayTime(1500);
     }
 
     short = () => {
         this.displayTime(300);
+    }
+
+    long = () => {
+        this.displayTime(900);
     }
 
     start = () => {
