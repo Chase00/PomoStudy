@@ -1,3 +1,5 @@
+
+
 .dial {
     height: 400px;
     width: 400px;
@@ -17,7 +19,7 @@
       'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
   
-  .timer input {
+  .timer p {
     display: block;
     border: none;
     width: 240px;
