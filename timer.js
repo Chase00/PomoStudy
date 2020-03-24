@@ -1,8 +1,13 @@
 class Timer {
-    constructor(durationInput, startButton, pauseButton, callbacks) {
+    constructor(durationInput, startButton, pauseButton, pomButton, shortButton, longButton, callbacks) {
         this.durationInput = durationInput;
         this.startButton = startButton;
         this.pauseButton = pauseButton;
+
+        this.pomButton = pomButton;
+        this.shortButton = shortButton;
+        this.longButton = longButton;
+
         if (callbacks) {
             this.onStart = callbacks.onStart;
             this.onTick = callbacks.onTick;
@@ -16,6 +21,16 @@ class Timer {
 
         this.startButton.addEventListener('click', this.start);
         this.pauseButton.addEventListener('click', this.pause);
+
+        this.pomButton.addEventListener('click', this.pomodoro);
+    }
+
+    pomodoro = () => {
+        this.durationInput.innerHTML = 1200;
+        this.timeLeft = durationInput.innerHTML;
+
+        this.durationInput.innerHTML = this.formatTime(this.timeLeft);
+
     }
 
     start = () => {
