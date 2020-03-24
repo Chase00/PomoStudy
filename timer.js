@@ -14,10 +14,7 @@ class Timer {
             this.onComplete = callbacks.onComplete
         }
 
-        this.durationInput.innerHTML = 1200;
-        this.timeLeft = durationInput.innerHTML;
-
-        this.durationInput.innerHTML = this.formatTime(this.timeLeft);
+        this.displayTime(1200);
 
         this.startButton.addEventListener('click', this.start);
         this.pauseButton.addEventListener('click', this.pause);
@@ -26,11 +23,7 @@ class Timer {
     }
 
     pomodoro = () => {
-        this.durationInput.innerHTML = 1200;
-        this.timeLeft = durationInput.innerHTML;
-
-        this.durationInput.innerHTML = this.formatTime(this.timeLeft);
-
+        this.displayTime(1200);
     }
 
     start = () => {
@@ -64,5 +57,12 @@ class Timer {
             seconds = `0${seconds}`;
         }
         return `${minutes}:${seconds}`;
+    }
+
+    displayTime = (time) => {
+        this.durationInput.innerHTML = time;
+        this.timeLeft = durationInput.innerHTML;
+
+        this.durationInput.innerHTML = this.formatTime(this.timeLeft);
     }
 }
