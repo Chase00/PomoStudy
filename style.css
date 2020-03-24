@@ -1,7 +1,32 @@
+/* For mobile phones */
+@media only screen and (max-width: 400px) {
+  .dial {
+    height: 400px;
+    width: 400px;
+  }
+
+  .timer {
+    position: none;
+
+  }
+
+  html, body{
+    height: 100%;
+    width: 100%;
+    scroll-behavior: smooth;
+    overflow: auto;
+  }
+
+  .controls {
+    display: inline-block;
+  }
+}
+
 html, body{
   height: auto;
   width: auto;
   scroll-behavior: smooth;
+  overflow: hidden;
 }
 
 body {
@@ -149,4 +174,3 @@ h1 {
     align-items: center;
     flex-direction: column;
   }
-
