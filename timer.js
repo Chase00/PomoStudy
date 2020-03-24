@@ -20,10 +20,15 @@ class Timer {
         this.pauseButton.addEventListener('click', this.pause);
 
         this.pomButton.addEventListener('click', this.pomodoro);
+        this.shortButton.addEventListener('click', this.short);
     }
 
     pomodoro = () => {
         this.displayTime(1200);
+    }
+
+    short = () => {
+        this.displayTime(300);
     }
 
     start = () => {
