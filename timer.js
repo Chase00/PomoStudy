@@ -29,6 +29,7 @@ class Timer {
 
     pomodoro = () => {
         document.title = "25:00";
+
         this.displayTime(1500);
         this.colorSwap("red", "green", "blue");
 
@@ -52,18 +53,14 @@ class Timer {
     }
 
     start = () => {
-
-        //this.startButton = element.addProperty('display');
         if (this.onStart) this.onStart(this.timeLeft);
         this.interval = setInterval(this.tick, 1000);
-        this.startButton.style.display = "none";
-        this.pauseButton.style.display = "";
+        this.btnSwap(this.startButton, this.pauseButton);
     };
 
     pause = () => {
         clearInterval(this.interval);
-        this.pauseButton.style.display = "none";
-        this.startButton.style.display = "";
+        this.btnSwap(this.pauseButton, this.startButton);
     }
 
     tick = () => {
@@ -109,11 +106,15 @@ class Timer {
         circle.classList.add(add);
     }
 
+    btnSwap = (hide, display) => {
+        hide.style.display = "none";
+        display.style.display = "";
+    }
+
     activeBtn = (non, non_, active) => {
         non.classList.remove('active');
         non_.classList.remove('active');
 
         active.classList.add('active');
-
     }
 }
