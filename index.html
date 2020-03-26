@@ -1,74 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css" />
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
 </head>
+
 <body>
   <div class="navbar">
-    <h1><i class="fas fa-stopwatch"></i> PomoTimer</h1>
+    <h1 class="nav-logo"><i class="fas fa-stopwatch"></i> PomoTimer</h1>
     <hr>
   </div>
 
   <br>
-  <div class = "group">
+  <div class="content">
     <div class="timer">
-        <div class="controls">
-          <p id="duration"></p>
-          <div>
-            <button id="start"><i class="crtl fas fa-play"></i></button>
-            <button id="pause"><i class="crtl fas fa-pause"></i></button>
-          </div>
-        </div>
-        <svg class="dial">
-
-            <circle class="d";
-            r="190" 
-            cx="200", 
-            cy="200" 
-            fill="transparent"
-            stroke="#485c61"
-            stroke-width="19"
-            />
-            
-            <circle class="c"
-              fill="transparent"
-              stroke="#62d6f0"
-              stroke-width="20"
-              r="190"
-              cx="0"
-              cy="200"
-              transform="rotate(-90 100 100)"
-            />
-          </svg>
-        </div>     
-        
-        <br>
-        <br>
-
-        <div class="btn-group">
-          <button class="button active" id="pomodoro">Pomodoro</button>
-          <button class="button" id="short">Short Break</button>
-          <button class="button" id="long">Long Break</button>
-        </div>
+      <div class="controler">
+        <p class="duration"></p>
+        <button id="start"><i class="btn-icon fas fa-play"></i></button>
+        <button id="pause"><i class="btn-icon fas fa-pause"></i></button>
       </div>
+      <svg class="progress-bar">
 
-      <br>
+        <circle class="back-c" ; r="190" cx="200" , cy="200" fill="transparent" stroke="#485c61" stroke-width="19" />
 
-      <footer>
-        <hr>
-        <a href="https://github.com/Chase00/Pomodoro-Timer"><img class="logo" src="/assets/github.png"></a>
-        <a href="https://chasekuhn.com"><img class="logo" src="/assets/link.png"></a>
-        <p class="cr">© PomoTimer 2020 - All Rights Reserved.</p>
-      </footer>
-    <script src="timer.js"></script>
-    <script src="index.js"></script>
+        <circle class="front-c" fill="transparent" stroke="#62d6f0" stroke-width="20" r="190" cx="0" cy="200"
+          transform="rotate(-90 100 100)" />
+      </svg>
+    </div>
+
+    <br>
+    <br>
+
+      <button class="btn-type active" id="pomodoro">Pomodoro</button>
+      <button class="btn-type" id="short">Short Break</button>
+      <button class="btn-type" id="long">Long Break</button>
+  </div>
+
+  <br>
+
+  <footer>
+    <hr>
+    <a href="https://github.com/Chase00/Pomodoro-Timer"><img class="footer-icons" src="/assets/github.png"></a>
+    <a href="https://chasekuhn.com"><img class="footer-icons" src="/assets/link.png"></a>
+    <p class="footer-text">© PomoTimer 2020 - All Rights Reserved.</p>
+  </footer>
+
+  <script src="timer.js"></script>
+  <script src="index.js"></script>
 </body>
 </html>

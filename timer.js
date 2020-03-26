@@ -104,7 +104,7 @@ class Timer {
         body.classList.remove(...cls);
         body.classList.add(add); 
 
-        const circle = document.querySelector('.c')
+        const circle = document.querySelector('.front-c')
         circle.classList.remove(...cls);
         circle.classList.add(add);
     }
