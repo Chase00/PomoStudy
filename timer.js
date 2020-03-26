@@ -17,6 +17,8 @@ class Timer {
         this.displayTime(1500);
         document.title = "25:00";
 
+        this.pauseButton.style.display = "none";
+
         this.startButton.addEventListener('click', this.start);
         this.pauseButton.addEventListener('click', this.pause);
 
@@ -50,12 +52,18 @@ class Timer {
     }
 
     start = () => {
+
+        //this.startButton = element.addProperty('display');
         if (this.onStart) this.onStart(this.timeLeft);
         this.interval = setInterval(this.tick, 1000);
+        this.startButton.style.display = "none";
+        this.pauseButton.style.display = "";
     };
 
     pause = () => {
         clearInterval(this.interval);
+        this.pauseButton.style.display = "none";
+        this.startButton.style.display = "";
     }
 
     tick = () => {

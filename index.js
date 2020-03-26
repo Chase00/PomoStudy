@@ -20,7 +20,6 @@ const timer = new Timer(durationInput, startButton, pauseButton, pomButton, shor
         circle.setAttribute('stroke-dashoffset',
         perimeter * timeRemaining / duration - perimeter
         );
-        console.log("Tick...")
     },
     onComplete() {
         console.log("Completed!")
