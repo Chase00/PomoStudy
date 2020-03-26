@@ -1,28 +1,45 @@
 /* For mobile phones */
-@media only screen and (max-width: 400px) {
-  .dial {
-    height: 400px;
-    width: 400px;
+@media only screen and (max-width: 450px) {
+  .c {
+    display: none;
+  }
+
+  .d {
+    display: none;
   }
 
   .timer {
-    position: none;
-
+    position: fixed;
   }
 
-  html, body{
+  .dial {
+    display: none;
+  }
+
+  body{
     height: 100%;
     width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
     scroll-behavior: smooth;
   }
 
   .controls {
-    display: inline-block;
+    position: static !important;
+    padding-top: 4em;
+    padding-bottom: 4em;
+    bottom: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 }
 
+html {
+  height: 100%;
+}
 html, body{
-  height: auto;
   width: auto;
   scroll-behavior: smooth;
 }
@@ -32,7 +49,10 @@ body {
     background-image: linear-gradient(19deg, rgb(0, 94, 138) 0%, rgb(113, 222, 255) 100%);
     font-weight: bold;
     background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100%;
     display: table;
+    grid-template-rows: 1fr auto;
     margin: 0 auto;
     padding-bottom: 8px;
 }
@@ -50,10 +70,6 @@ body {
 .red {
   background-image: linear-gradient(19deg, rgb(124, 51, 51) 0%, rgb(247, 107, 107) 100%);
   stroke: #ff9b9b;
-}
-
-.navbar {
-
 }
 
 hr {
