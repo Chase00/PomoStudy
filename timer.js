@@ -30,6 +30,9 @@ class Timer {
     pomodoro = () => {
         document.title = "25:00";
 
+        clearInterval(this.interval);
+        this.btnSwap(this.pauseButton, this.startButton)
+
         this.displayTime(1500);
         this.colorSwap("red", "green", "blue");
 
@@ -38,6 +41,10 @@ class Timer {
 
     short = () => {
         document.title = "5:00";
+
+        clearInterval(this.interval);
+        this.btnSwap(this.pauseButton, this.startButton)
+
         this.displayTime(300);
         this.colorSwap("blue", "red", "green");
 
@@ -46,6 +53,10 @@ class Timer {
 
     long = () => {
         document.title = "15:00";
+
+        clearInterval(this.interval);
+        this.btnSwap(this.pauseButton, this.startButton)
+        
         this.displayTime(900);
         this.colorSwap("blue", "green", "red");
 
