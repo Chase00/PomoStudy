@@ -56,13 +56,13 @@ body {
 }
 
 .green {
-  background-image: linear-gradient(19deg, rgb(51, 124, 69) 0%, rgb(64, 228, 119) 100%);
+  background-image: linear-gradient(19deg, rgb(51, 124, 69) 0%, rgb(83, 243, 136) 100%);
   stroke: #a4e480;
 }
 
-.red {
-  background-image: linear-gradient(19deg, rgb(124, 51, 51) 0%, rgb(247, 107, 107) 100%);
-  stroke: #ff9b9b;
+.purple {
+  background-image: linear-gradient(19deg, rgb(109, 23, 131) 0%, rgb(218, 109, 245) 100%);
+  stroke: #dd5dfd;
 }
 
 * {
@@ -84,6 +84,7 @@ body {
 }
 
 .timer button {
+  outline: none;
   border: none;
   background: none;
   font-size: 45px;

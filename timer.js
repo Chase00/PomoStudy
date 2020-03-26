@@ -34,7 +34,7 @@ class Timer {
         this.btnSwap(this.pauseButton, this.startButton)
 
         this.displayTime(1500);
-        this.colorSwap("red", "green", "blue");
+        this.colorSwap("purple", "green", "blue");
 
         this.activeBtn(this.shortButton, this.longButton, this.pomButton);
     }
@@ -46,7 +46,7 @@ class Timer {
         this.btnSwap(this.pauseButton, this.startButton)
 
         this.displayTime(300);
-        this.colorSwap("blue", "red", "green");
+        this.colorSwap("blue", "purple", "green");
 
         this.activeBtn(this.pomButton, this.longButton, this.shortButton);
     }
@@ -58,7 +58,7 @@ class Timer {
         this.btnSwap(this.pauseButton, this.startButton)
         
         this.displayTime(900);
-        this.colorSwap("blue", "green", "red");
+        this.colorSwap("blue", "green", "purple");
 
         this.activeBtn(this.pomButton, this.shortButton, this.longButton);
     }
