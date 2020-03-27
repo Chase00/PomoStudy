@@ -1,8 +1,9 @@
 class Timer {
-    constructor(durationInput, startButton, pauseButton, pomButton, shortButton, longButton, callbacks) {
+    constructor(durationInput, startButton, pauseButton, repeatButton, pomButton, shortButton, longButton, callbacks) {
         this.durationInput = durationInput;
         this.startButton = startButton;
         this.pauseButton = pauseButton;
+        this.repeatButton = repeatButton;
 
         this.pomButton = pomButton;
         this.shortButton = shortButton;
@@ -21,6 +22,7 @@ class Timer {
 
         this.startButton.addEventListener('click', this.start);
         this.pauseButton.addEventListener('click', this.pause);
+        this.repeatButton.addEventListener('click', this.repeat);
 
         this.pomButton.addEventListener('click', this.pomodoro);
         this.shortButton.addEventListener('click', this.short);
@@ -28,36 +30,39 @@ class Timer {
     }
 
     pomodoro = () => {
-        document.title = "25:00";
+        duration = 1500;
+        document.title = this.formatTime(duration);
 
         clearInterval(this.interval);
         this.btnSwap(this.pauseButton, this.startButton)
 
-        this.displayTime(1500);
+        this.displayTime(duration);
         this.colorSwap("purple", "green", "blue");
 
         this.activeBtn(this.shortButton, this.longButton, this.pomButton);
     }
 
     short = () => {
-        document.title = "5:00";
+        duration = 300;
+        document.title = this.formatTime(duration);
 
         clearInterval(this.interval);
         this.btnSwap(this.pauseButton, this.startButton)
 
-        this.displayTime(300);
+        this.displayTime(duration);
         this.colorSwap("blue", "purple", "green");
 
         this.activeBtn(this.pomButton, this.longButton, this.shortButton);
     }
 
     long = () => {
-        document.title = "15:00";
+        duration = 900;
+        document.title = this.formatTime(duration);
 
         clearInterval(this.interval);
         this.btnSwap(this.pauseButton, this.startButton)
         
-        this.displayTime(900);
+        this.displayTime(duration);
         this.colorSwap("blue", "green", "purple");
 
         this.activeBtn(this.pomButton, this.shortButton, this.longButton);
@@ -65,6 +70,7 @@ class Timer {
 
     start = () => {
         if (this.onStart) this.onStart(this.timeLeft);
+
         this.interval = setInterval(this.tick, 1000);
         this.btnSwap(this.startButton, this.pauseButton);
     };
@@ -72,6 +78,17 @@ class Timer {
     pause = () => {
         clearInterval(this.interval);
         this.btnSwap(this.pauseButton, this.startButton);
+    }
+
+    repeat = () => {
+        if (duration > 0){
+            document.title = this.formatTime(duration);
+
+            clearInterval(this.interval);
+            this.btnSwap(this.pauseButton, this.startButton)
+            
+            this.displayTime(duration);
+        }
     }
 
     tick = () => {
