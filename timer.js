@@ -33,6 +33,8 @@ class Timer {
         duration = 1500;
         document.title = this.formatTime(duration);
 
+        this.resetCircle();
+
         clearInterval(this.interval);
         this.btnSwap(this.pauseButton, this.startButton)
 
@@ -46,6 +48,8 @@ class Timer {
         duration = 300;
         document.title = this.formatTime(duration);
 
+        this.resetCircle();
+
         clearInterval(this.interval);
         this.btnSwap(this.pauseButton, this.startButton)
 
@@ -58,6 +62,8 @@ class Timer {
     long = () => {
         duration = 900;
         document.title = this.formatTime(duration);
+
+        this.resetCircle();
 
         clearInterval(this.interval);
         this.btnSwap(this.pauseButton, this.startButton)
@@ -85,6 +91,8 @@ class Timer {
             document.title = this.formatTime(duration);
 
             clearInterval(this.interval);
+            this.resetCircle();
+            
             this.btnSwap(this.pauseButton, this.startButton)
             
             this.displayTime(duration);
@@ -144,5 +152,9 @@ class Timer {
         non_.classList.remove('active');
 
         active.classList.add('active');
+    }
+
+    resetCircle = () => {
+        circle.setAttribute('stroke-dashoffset', '0');
     }
 }
