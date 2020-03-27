@@ -24,9 +24,11 @@ const timer = new Timer(durationInput, startButton, pauseButton, repeatButton, p
     },
     onComplete() {
         const sound = new Audio('/assets/sounds/completed.mp3');
-        sound.volume = 1;
+        sound.volume = 0.5;
         sound.addEventListener("canplaythrough", function() {
-            sound.play();
+            setTimeout(function(){
+                sound.play();
+            }, 200);
         });
     }
 });
