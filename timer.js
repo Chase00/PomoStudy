@@ -39,7 +39,7 @@ class Timer {
         this.btnSwap(this.pauseButton, this.startButton)
 
         this.displayTime(duration);
-        this.colorSwap("purple", "green", "blue");
+        this.colorSwap("blue", "purple", "green");
 
         this.activeBtn(this.shortButton, this.longButton, this.pomButton);
     }
@@ -54,7 +54,7 @@ class Timer {
         this.btnSwap(this.pauseButton, this.startButton)
 
         this.displayTime(duration);
-        this.colorSwap("blue", "purple", "green");
+        this.colorSwap("green", "blue", "purple");
 
         this.activeBtn(this.pomButton, this.longButton, this.shortButton);
     }
@@ -69,7 +69,7 @@ class Timer {
         this.btnSwap(this.pauseButton, this.startButton)
         
         this.displayTime(duration);
-        this.colorSwap("blue", "green", "purple");
+        this.colorSwap("purple", "blue", "green");
 
         this.activeBtn(this.pomButton, this.shortButton, this.longButton);
     }
@@ -92,7 +92,7 @@ class Timer {
 
             clearInterval(this.interval);
             this.resetCircle();
-            
+
             this.btnSwap(this.pauseButton, this.startButton)
             
             this.displayTime(duration);
@@ -131,15 +131,14 @@ class Timer {
         this.durationInput.innerHTML = this.formatTime(this.timeLeft);
     }
 
-    colorSwap = (del1, del2, add) => {
+    colorSwap = (setColor, ...delColor) => {
         const body = document.querySelector('body');
-        const cls = [del1 , del2];
-        body.classList.remove(...cls);
-        body.classList.add(add); 
+        body.classList.remove(...delColor);
+        body.classList.add(setColor); 
 
         const circle = document.querySelector('.front-c')
-        circle.classList.remove(...cls);
-        circle.classList.add(add);
+        circle.classList.remove(...delColor);
+        circle.classList.add(setColor);
     }
 
     btnSwap = (hide, display) => {
