@@ -41,7 +41,7 @@ class Timer {
         this.displayTime(duration);
         this.colorSwap("blue", "purple", "green");
 
-        this.activeBtn(this.shortButton, this.longButton, this.pomButton);
+        this.activeBtn(this.pomButton, this.shortButton, this.longButton);
     }
 
     short = () => {
@@ -56,7 +56,7 @@ class Timer {
         this.displayTime(duration);
         this.colorSwap("green", "blue", "purple");
 
-        this.activeBtn(this.pomButton, this.longButton, this.shortButton);
+        this.activeBtn(this.shortButton, this.pomButton, this.longButton);
     }
 
     long = () => {
@@ -71,7 +71,7 @@ class Timer {
         this.displayTime(duration);
         this.colorSwap("purple", "blue", "green");
 
-        this.activeBtn(this.pomButton, this.shortButton, this.longButton);
+        this.activeBtn(this.longButton, this.pomButton, this.shortButton);
     }
 
     start = () => {
@@ -146,11 +146,11 @@ class Timer {
         display.style.display = "";
     }
 
-    activeBtn = (non, non_, active) => {
-        non.classList.remove('active');
-        non_.classList.remove('active');
+    activeBtn = (setActive, delActiveA, delActiveB) => {
+        delActiveA.classList.remove('active');
+        delActiveB.classList.remove('active');
 
-        active.classList.add('active');
+        setActive.classList.add('active');
     }
 
     resetCircle = () => {
