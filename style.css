@@ -41,7 +41,7 @@ body {
   background-image: linear-gradient(19deg, rgb(0, 94, 138) 0%, rgb(113, 222, 255) 100%);
   background-repeat: no-repeat;
   background-size: cover;
-  font-family: 'Nunito', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-family: 'Nunito', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   font-weight: bold;
   display: table;
   width: auto;
@@ -74,7 +74,13 @@ body {
   padding-left: 5%;
   padding-left: 5%;
   color: white;
-  font-size: 30px;
+  font-size: 25px;
+}
+
+.heading {
+  font-size: 20px;
+  float: right;
+  color: rgba(255, 255, 255, 0.575)
 }
 
 .content {
@@ -90,7 +96,8 @@ body {
   outline: none;
   border: none;
   background: none;
-  font-size: 45px;
+  font-size: 40px;
+  padding-right: 15px;
   cursor: pointer;
 }
 
@@ -132,6 +139,7 @@ body {
 }
 
 .btn-type {
+  font-family: 'Nunito', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   border: none;
   outline: none;
   background-color: transparent;
@@ -140,8 +148,8 @@ body {
   cursor: pointer;
   color: #ffffff;
   font-family: Arial;
-  font-size: 21px;
-  padding: 16px 30px;
+  font-size: 18px;
+  padding: 10px 30px;
   text-decoration: none;
 }
 
