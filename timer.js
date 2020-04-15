@@ -1,5 +1,5 @@
 class Timer {
-    constructor(durationInput, startButton, pauseButton, repeatButton, pomButton, shortButton, longButton, callbacks) {
+    constructor(durationInput, startButton, pauseButton, repeatButton, pomButton, shortButton, longButton, heading, callbacks) {
         this.durationInput = durationInput;
         this.startButton = startButton;
         this.pauseButton = pauseButton;
@@ -8,6 +8,8 @@ class Timer {
         this.pomButton = pomButton;
         this.shortButton = shortButton;
         this.longButton = longButton;
+
+        this.heading = heading;
 
         if (callbacks) {
             this.onStart = callbacks.onStart;
@@ -33,6 +35,8 @@ class Timer {
         duration = 1500;
         document.title = this.formatTime(duration);
 
+        this.heading.innerHTML = "✔ Work time";
+
         this.resetCircle();
 
         clearInterval(this.interval);
@@ -48,6 +52,8 @@ class Timer {
         duration = 300;
         document.title = this.formatTime(duration);
 
+        this.heading.innerHTML = "✔ Break time";
+
         this.resetCircle();
 
         clearInterval(this.interval);
@@ -62,6 +68,8 @@ class Timer {
     long = () => {
         duration = 900;
         document.title = this.formatTime(duration);
+
+        this.heading.innerHTML = "✔ Break time";
 
         this.resetCircle();
 

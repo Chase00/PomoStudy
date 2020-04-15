@@ -6,6 +6,8 @@ const pomButton = document.querySelector('#pomodoro');
 const shortButton = document.querySelector('#short');
 const longButton = document.querySelector('#long');
 
+const heading = document.querySelector('.heading');
+
 const circle = document.querySelector('.front-c');
 
 const perimeter = circle.getAttribute('r') * 2 * Math.PI;
@@ -13,7 +15,7 @@ circle.setAttribute('stroke-dasharray', perimeter);
 
 let duration;
 
-const timer = new Timer(durationInput, startButton, pauseButton, repeatButton, pomButton, shortButton, longButton, {
+const timer = new Timer(durationInput, startButton, pauseButton, repeatButton, pomButton, shortButton, longButton, heading, {
     onStart(totalDuration) {
         duration = totalDuration;
     },
