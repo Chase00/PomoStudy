@@ -110,7 +110,10 @@ class Timer {
     tick = () => {
         if(this.timeLeft <= 0){
             this.pause();
-            if (this.onComplete) this.onComplete();
+            if (this.onComplete)  {
+                this.startButton.style.display = "none";
+                this.onComplete();
+            }
         }
         else {
             this.timeLeft = this.timeLeft -1;
